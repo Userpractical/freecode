@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple library of practical programs with one-click code copying.">
+  <title>Practical Code Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">&lt;/&gt;</span> Practical Code Library</a>
+    <span class="top-note">Student coding resources</span>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-heading">YOUR LIBRARY</div>
+      <button class="nav-item active" id="allButton">▦ <span>All practicals</span><b id="count"></b></button>
+      <div class="side-tip">
+        <strong>Quick tip</strong>
+        <p>Select a practical, then press <b>Copy Code</b> to copy the complete program.</p>
+      </div>
+      <div class="side-footer">Simple • Fast • Free</div>
+    </aside>
+
+    <section class="content">
+      <div class="intro">
+        <p class="eyebrow">CODE COLLECTION</p>
+        <h1>Your practicals, in one place.</h1>
+        <p class="subtitle">Find a practical, view its source code, and copy it in one click.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Search practicals or topics..." autocomplete="off">
+        </label>
+        <select id="languageFilter" aria-label="Filter by language">
+          <option value="all">All languages</option>
+          <option value="C">C</option>
+          <option value="Bash">Bash</option>
+          <option value="Python">Python</option>
+          <option value="Text">Text</option>
+          <option value="Dockerfile">Dockerfile</option>
+        </select>
+      </div>
+
+      <div class="workspace">
+        <section class="practical-list">
+          <div class="section-label">PRACTICAL LIST <span id="resultCount"></span></div>
+          <div id="practicalCards"></div>
+        </section>
+
+        <section class="code-panel">
+          <div class="code-heading">
+            <div>
+              <div class="section-label">SOURCE CODE</div>
+              <h2 id="codeTitle">Select a practical</h2>
+              <p id="codeDescription">Choose an item from the list to view its code.</p>
+            </div>
+            <span class="language-pill" id="languagePill">CODE</span>
+          </div>
+          <div class="code-actions">
+            <span id="lineCount">No code selected</span>
+            <button id="copyButton" class="copy-button" disabled>▣ &nbsp;Copy Code</button>
+          </div>
+          <pre class="code-box"><code id="codeOutput">Select a practical from the list to display its source code here.</code></pre>
+          <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+        </section>
+      </div>
+      <footer>Made for practical learning · Use the code responsibly and test it before submission.</footer>
+    </section>
+  </main>
+  <script src="practicals.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
